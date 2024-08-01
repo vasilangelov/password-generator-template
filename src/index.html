@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="title">Password Generator</h1>
+
+      <section class="password-box box">
+        <span class="password-box__password password-box__password--empty"
+          >P4$5W0rD!</span
+        >
+        <button class="password-box__copy-button">
+          <span class="material-symbols-outlined password-box__copy-icon"
+            >file_copy</span
+          >
+        </button>
+      </section>
+
+      <form class="form-box box">
+        <div>
+          <div class="character-length-group">
+            <label for="characterLength" class="label">Character Length</label>
+
+            <span class="character-length-text">10</span>
+          </div>
+          <input
+            id="characterLength"
+            name="characterLength"
+            type="range"
+            min="1"
+            max="32"
+            class="range-input"
+            step="1"
+          />
+        </div>
+
+        <div class="checkbox-group">
+          <div class="form-control">
+            <input
+              type="checkbox"
+              name="includeUppercaseLetters"
+              id="includeUppercaseLetters"
+              class="checkbox"
+            />
+            <label for="includeUppercaseLetters" class="label"
+              >Include Uppercase Letters</label
+            >
+          </div>
+
+          <div class="form-control">
+            <input
+              type="checkbox"
+              name="includeLowercaseLetters"
+              id="includeLowercaseLetters"
+              class="checkbox"
+            />
+            <label for="includeLowercaseLetters" class="label"
+              >Include Lowercase Letters</label
+            >
+          </div>
+
+          <div class="form-control">
+            <input
+              type="checkbox"
+              name="includeNumbers"
+              id="includeNumbers"
+              class="checkbox"
+            />
+            <label for="includeNumbers" class="label">Include Numbers</label>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="checkbox"
+              name="includeSymbols"
+              id="includeSymbols"
+              class="checkbox"
+            />
+            <label for="includeSymbols" class="label">Include Symbols</label>
+          </div>
+        </div>
+
+        <section class="box box--dark password-strength-box">
+          <h3 class="password-strength-box__label">Strength</h3>
+          <div class="password-strength-box__password-strength-group">
+            <span>MEDIUM</span>
+
+            <div class="password-strength-box__strength-indicator-group">
+              <span
+                class="password-strength-box__strength-indicator password-strength-box__strength-indicator--active"
+              ></span>
+              <span
+                class="password-strength-box__strength-indicator password-strength-box__strength-indicator--active"
+              ></span>
+              <span
+                class="password-strength-box__strength-indicator password-strength-box__strength-indicator--active"
+              ></span>
+              <span class="password-strength-box__strength-indicator"></span>
+            </div>
+          </div>
+        </section>
+
+        <button type="submit" class="submit-button">
+          Generate
+          <span class="material-symbols-outlined">arrow_right_alt</span>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
